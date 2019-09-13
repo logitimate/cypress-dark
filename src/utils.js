@@ -7,11 +7,8 @@ const cssVariables = require('postcss-css-variables')
 const getSourceFolder = () => {
   // if source folder starts with /../...
   // the the user package has installed it using relative "file:.." link
-  const installedAsFile = Cypress._.startsWith(__dirname, '/..')
-  const sourceFolder = installedAsFile
-    ? join('node_modules/cypress-dark/src')
-    : __dirname
-  return sourceFolder.replace(/^\//, '')
+  const sourceFolder = join('node_modules/cypress-dark/src');
+  return sourceFolder;
 }
 
 /**
